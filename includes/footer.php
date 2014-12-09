@@ -15,6 +15,6 @@
 			</ul>
 		</nav>
 		<address>1402 Anywhere St., Dallas, WA 55555</address>
-		<small>© 2014 New Learning Vision</small>
+		<small>© 2014 Some Company</small>
 	</footer>
 </section>
