@@ -1,0 +1,29 @@
+* {}
+html {}
+body {}
+h1, h2, h3, h4, h5, h6 {}
+a {}
+p {}
+ul {}
+li {}
+label {}
+input {}
+select {}
+fieldset {}
+button {}
+span {}
+
+
+use legend & fieldset for filter and sort elements?
+navs and sorts should work the same? 
+keep anchors the same as now.
+
+
+action items:
+	Figure out sign in. Need to add forgot password link. How does this play with the "Sign up" anchor? Should it be an anchor?
+	Implement an image for Main Content on Mobile. Might be able to sell that instead of content slider?
+
+
+let's make links behave the same, regardless of context	
+<a href="somewheregreat.html" class="button"></a>
+<a href="somewheregreat.html" class="bubble navigation || sort"></a>

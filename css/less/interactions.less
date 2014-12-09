@@ -1,0 +1,36 @@
+// Begin toggles and interactivity
+.toggle {
+    font-size: 0.875em;
+    font-weight: normal;
+    color: @bodyText;
+    cursor: pointer;
+    background-color: #fff;
+    padding: .7em;
+    display: block;
+    margin: .875em 0 .375em;
+    width: 100%;
+    h5 {
+    	font-weight: normal;
+    	margin: 0;
+    }
+    h6 {
+    	font-weight: normal;
+    	margin: 0;
+    }
+    + ul {
+	    margin-top: 0;
+	}
+	&:after {
+		content: "\e75c";
+		font-family: entypo;
+		float: right;
+		font-size: 1.250em;
+		line-height: 1.1;
+		top: -1em;
+	}
+	&.open {
+		&:after {
+			content: "\e75f";
+		}
+	}
+}

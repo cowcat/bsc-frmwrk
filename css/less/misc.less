@@ -1,0 +1,68 @@
+// Icons
+
+/* entypo */
+[class*="entypo-"]:before {
+	font-family: 'entypo', sans-serif;
+}
+
+.icon {
+	display: inline-block;
+	position: relative;
+	font-style: normal;
+	&:after, &:before {
+		display: inline-block;
+		position: relative;
+		font-weight: normal;
+		letter-spacing: 1px;
+		line-height: 1;
+		text-align: center;
+		speak: none;
+	}
+}
+
+::selection {
+    color: @baseColor;
+    background-color: lighten(spin(@baseColor, 80), 60%);
+    opacity: .5;
+}
+
+// Begin clearfixes
+
+.cf {
+	zoom: 1;
+	&:before {
+		content: "";
+		display: table;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// End clearfixes
+
+.container {
+    min-width: 262px;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+	display: none;
+	opacity: 0;
+}
+
+// Fix Hover Issues on touch devices
+.no-touch {
+	a {
+		&:hover {
+			// text-decoration: underline;
+			text-decoration: none;
+			border-bottom: #553656 1px dotted;
+			background-color: rgba(85, 54, 86, 0.19);
+			-webkit-transition: all 100ms;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+// Mixins below here
+
+// @canvasBackground: #efebe2;
+// @bodyText: #8f747d;
+// @headerText: #553656;
+// @labelText: #8f747d;
+// @anchorLink: #371c25;
+
+// @baseFontSize: 1em;
+
+// @baseMeasurement: .313em;
+
+
+// @baseColor: #553656;
+// @darkColor: darken(@baseColor, 10%);
+// @evenDarker: darken(@baseColor, 20%);
+// @lightColor: lighten(@baseColor, 10%);
+// @evenLighter: lighten(@baseColor, 20%);
+// @superLight: lighten(@baseColor, 60%);
+
+// @canvasBackgroundLighter: lighten(@canvasBackground, 3%);
+
+
+// Considerations:
+// Take all h's down to the next level and add a 14px headline for h6 on mobile. As window grows, fallback to the current set
+// Swap active & hover bacgkround/text colors for navs and sorts? Hmmm. Which is better? Affordance of hover or active state?
+
+
+// New Mixins
+// @canvasBackground: #efebe2;
+@canvasBackground: #f5f3ed;
+@baseColor: hsv(300, 37%, 34%);
+@cta: spin(saturate(lighten(@baseColor, 32%), 80%), -250);
+
+// Base Derivitives
+
+@charcoal: hsv(hsvhue(@baseColor), (hsvsaturation(@baseColor) - 20%), (hsvvalue(@baseColor) - 20%));
+@slate: hsv(hsvhue(@baseColor), (hsvsaturation(@baseColor) - 20%), (hsvvalue(@baseColor) - 10%));
+@purple:hsv(hsvhue(@baseColor), hsvsaturation(@baseColor), (hsvvalue(@baseColor) + 10%));
+@grimace: hsv(hsvhue(@baseColor), (hsvsaturation(@baseColor) - 10%), (hsvvalue(@baseColor) + 20%));
+@periwinkle: hsv(hsvhue(@baseColor), (hsvsaturation(@baseColor) - 20%), (hsvvalue(@baseColor) + 40%));
+@lavender: hsv(hsvhue(@baseColor), (hsvsaturation(@baseColor) - 35%), (hsvvalue(@baseColor) + 56%));
+@white: hsv(hsvhue(@baseColor), (hsvsaturation(@baseColor) - 100%), (hsvvalue(@baseColor) + 100%));
+
+// Set toolkit basics
+@headerText: @slate;
+@bodyText: @purple;
+@linkText: @baseColor;
+
+@alertSuccess: #408033;
+@alertSuccessBG: #ddf7d7;
+@alertError: #993d3d;
+@alertErrorBG: #f7d7d7;
+@alertWarn: #807933;
+@alertWarnBG: #f7f3be;
+@alertInfo: #3d6b99;
+@alertInfoBG:#d7e7f7;
+
+
+// .alertBG(@hsvVariable) {
+// 	background-color: hsv((hsvhue(@baseColor) - @hsvVariable), (hsvsaturation(@baseColor) - 24%), (hsvvalue(@baseColor) + 63%));
+// }
+
+// .alertText(@hsvVariable) {
+// 	color: hsv((hsvhue(@baseColor) - @hsvVariable), (hsvsaturation(@baseColor) + 23%), (hsvvalue(@baseColor) + 26%));
+// }

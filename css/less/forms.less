@@ -1,0 +1,251 @@
+// Begin Form Elements
+
+// select { //from expedia. needs fixes, namely icon to replace native affordance
+//     padding-right: 2em; 
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     -o-appearance: none;
+//     appearance: none;
+//     width: 100%;
+//     // height: 2.4em;
+//     border-color: #858585;
+//     -webkit-border-radius: 0.2em;
+//     -moz-border-radius: 0.2em;
+//     -o-border-radius: 0.2em;
+//     border-radius: 0.2em;
+//     padding-top: 0.4em;
+//     padding-bottom: 0.4em;
+//     background: #f5f5f5;
+//     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #e7e7e7));
+//     background: -webkit-linear-gradient(top, #f5f5f5 0%, #e7e7e7 100%);
+//     background: -moz-linear-gradient(top, #f5f5f5 0%, #e7e7e7 100%);
+//     background: -ms-linear-gradient(top, #f5f5f5 0%, #e7e7e7 100%);
+//     background: linear-gradient(top, #f5f5f5 0%, #e7e7e7 100%);
+//     min-height: 2.4em;
+//     outline: none;
+//     padding: 0.53333333em 0.8em;
+//     // font-size: 0.8823529411764706em;
+//     min-height: 2.4em;
+//     outline: none;
+//     padding: 0.53333333em 0.8em;
+// }
+
+.error {
+    color: red;
+    > input {
+        border: 1px solid red !important;
+    }
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    + fieldset {
+        margin-top: 1.5em;
+    }
+}
+
+label {
+	cursor: pointer;
+	font-size: .875em;
+	margin-bottom: .5em;
+	display: inline-block;
+	width: 100%;
+	line-height: 1.5em;
+    span.label {
+        margin-bottom: .25em;
+        display: inline-block;
+    }
+	+ label {
+	    margin-top: .5em;
+	}
+}
+
+input[type="text"], input[type="password"] {
+    border: #c7c7c7 1px solid;
+    padding: 0.625em;
+    // font-size: .875em;
+    margin: 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    &:focus {
+    	outline-color: currentcolor;
+    }
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+} 
+
+button {
+    -webkit-appearance: none;
+    background-color: @baseColor;
+    background: linear-gradient(@baseColor 60%, multiply(@baseColor, rgba(0, 0, 0, 0.1)));
+    border-radius: 3px;
+    font-size: 1.5em;
+    color: #fff;
+    border: none;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: .425em .75em;
+    position: relative;
+    font-weight: normal;
+    &.cta {
+        color: @baseColor;
+        background-color: @cta;
+        background: linear-gradient(@cta 60%, multiply(@cta, rgba(0, 0, 0, 0.1)));
+        border: 1px solid darken(@cta, 20%);
+        border-bottom: 3px solid darken(@cta, 30%);
+        border-top: none;
+        &:hover {
+            background: lighten(@cta, 10%);
+        }
+        &:focus {
+            background: lighten(@cta, 10%);
+            outline: currentcolor;
+        }
+    }
+    &.primary {
+        border: 1px solid darken(@baseColor, 10%);
+        border-bottom: 3px solid darken(@baseColor, 20%);
+        border-top: none;
+    	&:hover {
+    		background: lighten(@baseColor, 10%);
+    	}
+        &:focus {
+            background: lighten(@baseColor, 10%);
+            outline: currentcolor;
+        }
+    }
+    &.secondary {
+        color: @white;
+        border: 1px solid darken(@grimace, 10%);
+        border-bottom: 3px solid darken(@grimace, 20%);
+        border-top: none;
+    	background-color: @grimace;
+        background: linear-gradient(@grimace 60%, multiply(@grimace, rgba(0, 0, 0, 0.1)));
+    	&:hover {
+    		background: lighten(@grimace, 10%);
+            color: @white;
+    	}
+        &:focus {
+            background: lighten(@grimace, 10%);
+            color: @white;
+            outline: currentcolor;
+        }
+    }
+    &.disabled {
+        border: 1px solid darken(#c7c7c7, 20%);
+        border-bottom: 3px solid darken(#c7c7c7, 30%);
+        border-top: none;
+	    background: #c7c7c7;
+	    color: #e5e5e5;
+	    cursor: not-allowed;
+        &:active {
+            top: 0;
+        }
+	}
+	&.btn-large {
+	    // height: 2em;
+	}
+	&.btn-small {
+		font-size: 1em;
+		// padding: 0;
+	}
+}
+
+.controls {
+	color: @linkText;
+	label {
+		display: inline;
+	}
+	h6 {
+		padding: 0;
+		margin: 10px 0;
+		// font-size: .875em;
+		font-weight: normal;
+		color: #8f747d;
+        font-family: "Droid Sans", "Helvetica Neue", "Lucida Grande", sans-serif;
+	}
+    .disabled {
+	    color: #a7a7a7;
+	    cursor: not-allowed;
+	}
+	&.sort {
+		display: inline;
+        list-style-type: none;
+        padding: 0;
+		li {
+		    display: inline;
+		    padding: .35em .5em;
+		    margin-right: .25em;
+            &:first-child {
+                margin: 0;
+            }
+		    &:hover {
+		    	background-color: rgba(85, 54, 86, 0.19);
+		    	border-radius: 5px;
+		    }
+		    &:active {}
+		    &:visited {}
+		    &.active {
+		        background: @grimace;
+		        border-radius: 5px;
+		        color: white;
+		    }
+		    input {
+		        display: none;
+		    }
+		}
+	}
+	&.filter {
+        list-style-type: none;
+        padding: 0;
+        li span {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+
+
+// custom radio and checkbox inputs
+// input[type=checkbox] {
+//  &:before {
+//      content:'';
+//      height: 13px;
+//      width: 13px;
+//      color: red;
+//      left: 0px;
+//      background-color: red;
+//      display: inline-block;
+//      position: relative;
+//      border-radius: 3px;
+//  }
+//  &:checked {
+//      &:before {
+//          content:'';
+//          height: 13px;
+//          width: 13px;
+//          color: red;
+//          left: 0px;
+//          background-color: blue;
+//          display: inline-block;
+//          position: relative;    
+//      }
+//  }
+// }
+
+// input[type=radio] {
+//  &:extend(input[type=checkbox] all);
+// }
+
+// input[type="password"]:focus {
+//     outline-color: currentcolor;
+//     outline-width: initial;
+// }

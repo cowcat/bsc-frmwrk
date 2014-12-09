@@ -1,0 +1,45 @@
+// Begin alerts & feedback
+.alert {
+	width: 100%;
+	font-size: .875em;
+	border: 1px solid;
+	border-top: 3px solid;
+	p {
+		padding: .875em .875em .875em 2.4em;
+		margin: 0;
+	}
+	&:before {
+	    position: absolute;
+	    top: 16px;
+	    left: 10px;
+	    text-align: center;
+	}
+	&.success {
+		color: @alertSuccess;
+		background-color: @alertSuccessBG;
+		p{
+			color: @alertSuccess;
+		}
+	}
+	&.error {
+		color: @alertError;
+		background-color: @alertErrorBG;
+		p{
+			color: @alertError;
+		}
+	}
+	&.warn {
+		color: @alertWarn;
+		background-color: @alertWarnBG;
+		p{
+			color: @alertWarn;
+		}
+	}
+	&.info {
+		color: @alertInfo;
+		background-color: @alertInfoBG;
+		p{
+			color: @alertInfo;
+		}
+	}
+}

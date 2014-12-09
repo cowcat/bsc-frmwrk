@@ -1,0 +1,114 @@
+.container {
+	-webkit-transition: all .5s;
+	> h1 {
+		background-color: @white;
+		padding: .5em 50em;
+		margin: 0 -50em;
+		color: @baseColor;
+	}
+}
+
+.toolkit-view-switch {
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	margin: 0 -3000px;
+	padding: 0 3000px;
+	z-index: 9000;
+	button {
+		display: inline;
+		width: auto;
+		background-color: @periwinkle;
+	}
+}
+
+section {
+	> h2 {
+		background-color: @lavender;
+		padding: .5em 50em;
+		margin: 0 -50em;
+		color: @baseColor;
+	}
+}
+
+footer {
+	margin-bottom: 3em;
+}
+
+#colors,
+#lessons {
+	ul {
+		padding: 0;
+		list-style-type: none;
+	}
+}
+
+#typography-basics {
+	.headers {
+		padding: 0;
+		list-style-type: none;
+		h1 { margin: 0; }
+		h2 { margin: 0; }
+		h3 { margin: 0; }
+		h4 { margin: 0; }
+		h5 { margin: 0; }
+		h6 { margin: 0; }
+	}
+}
+
+// Start colors
+.colors {
+	padding: 1em 0;
+	text-align: center;
+	border-radius: .5em;
+}
+
+.charcoal {
+	color: @periwinkle;
+}
+
+.purple,
+.brand,
+.slate {
+	color: @grimace;
+}
+
+// Begin illustrations for David
+
+.success.david {
+	color: darken(@alertSuccess, 10%);
+	background-color: #a7d4b7;
+	margin-top: 12px;
+}
+
+.error.david {
+	color: darken(@alertError, 10%);
+	background-color: #f77e76;
+	margin-top: 12px;
+}
+
+.warn.david {
+	color: darken(@alertWarn, 10%);
+	background-color: #feedb5;
+	margin-top: 12px;
+}
+
+.info.david {
+	color: darken(@alertInfo, 10%);
+	background-color: #82ceca;
+	margin-top: 12px;
+}
+
+a.button.david {
+	font-family: "Droid Serif";
+}
+
+
+// Start media queries
+@media all and (max-width: 280px) and (min-width: 0) {
+
+}
+
+@media all and (max-width: 560px) and (min-width: 281) {
+
+}

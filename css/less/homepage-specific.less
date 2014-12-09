@@ -1,0 +1,58 @@
+// Begin Main Content
+.main-content {
+	// text-align: center;
+}
+
+.offerings {
+	font-size: 1.25em;
+	font-weight: bold;
+	span {
+		font-size: .875em;
+		margin-left: .375em;
+		top: 1px;
+	}
+}
+
+.home-page-sections section {
+	margin: 1.25em 0;
+}
+
+// Begin Hero Image
+.hero-content h5, .hero-content p, .hero-content a {
+    color: white;
+    :hover {
+    	background-color: red;
+    }
+}
+
+.hero-content {
+	margin: 0 auto;
+	background: url('../img/hero-image.png') center no-repeat;
+	/* -webkit-background-size: contain; */
+	background-size: contain;
+	margin: 0 -3000px;
+	padding: 20px 3000px;
+	&:after {
+		left: 100%;
+		content: "";
+		position: absolute;
+		background: black;  /* Match the background */
+		top: 0;
+		bottom: 0;
+		width: 9999px;   /* some huge width */
+	}
+	&:before {
+		right: 100%;
+		content: "";
+		position: absolute;
+		background: black;  /* Match the background */
+		top: 0;
+		bottom: 0;
+		width: 9999px;   /* some huge width */
+	}
+}
+
+.hero-image {
+	position: relative;
+	// background-attachment: fixed;
+}
